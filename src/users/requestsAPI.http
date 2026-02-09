@@ -4,11 +4,11 @@ content-type: application/json
 
 {
     "email": "habib.conley@gmail.com",
-    "password": "HiddPassNoSo1"
+    "password": "HiddPassNoSo12"
 }
 
 ### Find a user with id
-GET http://localhost:3000/auth/3
+GET http://localhost:3000/auth/5
 
 ### Update User
 PATCH http://localhost:3000/auth/1
@@ -19,11 +19,18 @@ content-type: application/json
     "password": "ABrandNeWPass123!"
 }
 ### Update User
-PATCH http://localhost:3000/auth/2
+PATCH http://localhost:3000/auth/5
 content-type: application/json
 
+ // isAdmin and role will  be stripped by DTO
+
 {
-    "password": "ABrandNeWPass123!"
+    "password": "HiddPassNoSo222!!",
+    "isAdmin": "true",
+    "role": "superuser"
 }
 ### Delete user
-DELETE http://localhost:3000/auth/1
+DELETE http://localhost:3000/auth/122
+
+###
+GET http://localhost:3000/auth?email=test1@email.com
