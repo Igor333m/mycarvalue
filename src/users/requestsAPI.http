@@ -3,23 +3,23 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "habib.conley@gmail.com",
-    "password": "HiddPassNoSo12"
+    "email": "cons.conley@gmail.com",
+    "password": "HiddPassNoSo@#$12"
 }
 
 ### Find a user with id
-GET http://localhost:3000/auth/5
+GET http://localhost:3000/auth/8
 
 ### Update User
-PATCH http://localhost:3000/auth/1
+PATCH http://localhost:3000/auth/7
 content-type: application/json
 
 {
     "email": "Igor333m@gmail.com",
-    "password": "ABrandNeWPass123!"
+    "password": "ABrandNeWPass123@#$%!"
 }
 ### Update User
-PATCH http://localhost:3000/auth/5
+PATCH http://localhost:3000/auth/8
 content-type: application/json
 
  // isAdmin and role will  be stripped by DTO
