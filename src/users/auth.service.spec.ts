@@ -80,10 +80,10 @@ describe('AuthService', () => {
       const hashedPassword = `${salt}.${storedHash}`
       
       fakeUserService.findByEmail = jest.fn().mockResolvedValue([
-        { id: 1, email: 'Igor333mm@gmail.com', password: hashedPassword } as User,
+        { id: 1, email: 'invalid@example.com', password: hashedPassword } as User,
       ])
 
-      await expect(service.signin('Igor333mm@gmail.com', 'wrongpassword')).rejects.toThrow(
+      await expect(service.signin('invalid@example.com', 'wrongpassword')).rejects.toThrow(
         UnauthorizedException,
       )
     })
